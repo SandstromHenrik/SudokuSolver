@@ -6,7 +6,7 @@ const admin = require('firebase-admin');
 
 // Initialize admin rights & storage bucket
 if (['true', true].includes(process.env.FUNCTIONS_EMULATOR)) {
-  const serviceAccount = require('./suduko-70190-firebase-adminsdk-w1s9k-6d76e795c2.json');
+  const serviceAccount = require('./firebase-adminsdk-w1s9k.json');
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     storageBucket: 'suduko-70190.appspot.com'
